@@ -1,0 +1,18 @@
+# 如果需要指定外部配置文件java -jar xxx.jar --spring.config.location=配置文件路径
+# 如果需要指定外部日志配置文件java -jar xxx.jar --logging.config=配置文件路径
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+logging:
+  level:
+    root: info
+    com.lrm: debug
+  file: log/blog-dev.log
